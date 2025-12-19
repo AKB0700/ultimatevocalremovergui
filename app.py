@@ -21,16 +21,17 @@ def separate_vocals(audio_file):
         audio_file: Input audio file path
         
     Returns:
-        Tuple of (vocals_path, instrumental_path)
+        Tuple of (vocals_message, instrumental_message)
     """
     if audio_file is None:
         return None, None
     
     # TODO: Integrate actual UVR separation logic here
-    # For now, return a message indicating this is a demo
-    info_text = "This is a demo interface. Full implementation requires UVR models."
+    # For now, return distinct messages indicating this is a demo
+    vocals_msg = "Vocals Output: This is a demo interface. Full implementation requires UVR models."
+    instrumental_msg = "Instrumental Output: This is a demo interface. Full implementation requires UVR models."
     
-    return info_text, info_text
+    return vocals_msg, instrumental_msg
 
 # Create Gradio interface
 with gr.Blocks(title="Voice Clone Podcast - UVR Demo") as demo:
@@ -53,7 +54,7 @@ with gr.Blocks(title="Voice Clone Podcast - UVR Demo") as demo:
     with gr.Row():
         with gr.Column():
             audio_input = gr.Audio(
-                label="Upload Audio File",
+                label="Upload Audio File (wav, mp3, flac, ogg)",
                 type="filepath",
                 sources=["upload"]
             )
