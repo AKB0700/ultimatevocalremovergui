@@ -29,6 +29,24 @@ brew install git-xet
 git xet install
 ```
 
+**Windows:**
+```bash
+# Using Scoop package manager
+scoop install git-xet
+git xet install
+
+# Or download from GitHub releases
+# Visit: https://github.com/xetdata/xet-tools/releases
+```
+
+**Linux:**
+```bash
+# Download and install from GitHub releases
+# Visit: https://github.com/xetdata/xet-tools/releases
+# Then run:
+git xet install
+```
+
 After installing Git-XET, you can clone the repository:
 ```bash
 git clone https://github.com/Anjok07/ultimatevocalremovergui.git
