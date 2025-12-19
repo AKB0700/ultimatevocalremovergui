@@ -23,7 +23,7 @@ These bundles contain the UVR interface, Python, PyTorch, and other dependencies
 
 If you prefer to clone this repository using Git instead of downloading the ZIP file, you'll need Git-XET to properly handle the large model files.
 
-**MacOS:**
+**macOS:**
 ```bash
 brew install git-xet
 git xet install
