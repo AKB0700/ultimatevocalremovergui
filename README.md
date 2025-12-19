@@ -4,6 +4,11 @@
 [![Release](https://img.shields.io/github/release/anjok07/ultimatevocalremovergui.svg)](https://github.com/anjok07/ultimatevocalremovergui/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/anjok07/ultimatevocalremovergui/total.svg)](https://github.com/anjok07/ultimatevocalremovergui/releases)
 
+## Web Demo
+
+Try the voice separation demo for podcast and voice cloning applications:
+- [Voice Clone Podcast Demo](https://vidraft-voice-clone-podcast.hf.space) - Hugging Face Space demo
+
 ## About
 
 This application uses state-of-the-art source separation models to remove vocals from audio files. UVR's core developers trained all of the models provided in this package (except for the Demucs v3 and v4 4-stem models).
