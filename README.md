@@ -19,6 +19,21 @@ This application uses state-of-the-art source separation models to remove vocals
 
 These bundles contain the UVR interface, Python, PyTorch, and other dependencies needed to run the application effectively. No prerequisites are required.
 
+### Cloning the Repository (Optional)
+
+If you prefer to clone this repository using Git instead of downloading the ZIP file, you'll need Git-XET to properly handle the large model files.
+
+**MacOS:**
+```bash
+brew install git-xet
+git xet install
+```
+
+After installing Git-XET, you can clone the repository:
+```bash
+git clone https://github.com/Anjok07/ultimatevocalremovergui.git
+```
+
 ### Windows Installation
 
 - Please Note:
