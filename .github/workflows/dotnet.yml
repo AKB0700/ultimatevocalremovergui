@@ -1,0 +1,47 @@
+name: .NET Core SDK Setup
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: 安裝 .NET Core SDK
+        uses: actions/setup-dotnet@v5.0.1
+        with:
+          # 選購的 SDK 版本。如果未提供，則在可用時會安裝 global.json 中的版本。
+          # 例如：2.2.104、3.1、3.1.x、3.x、6.0.2xx
+          dotnet-version: '8.0.x'  # 可選
+          # 建造品質（可選）。可選值有：daily、signed、validated、preview、ga。
+          # dotnet-quality: 'ga'  # 可選
+          # 可選的 global.json 位置，如果您的 global.json 不在儲存庫的根目錄中。
+          # global-json-file: 'global.json'  # 可選
+          # 可選的套件來源，用於設定身份驗證。
+          # 將檢查倉庫根目錄中任何現有的 NuGet.config 文件，
+          # 並使用 NUGET_AUTH_TOKEN 環境變數作為明文密碼提供一個臨時的
+          # NuGet.config 檔案。
+          # source-url: 'https://nuget.pkg.github.com/OWNER/index.json'  # 可選
+          # 可選的 OWNER 參數，用於指定要使用的套件來自 GitHub Package
+          # Registry 中的組織/用戶，而非目前倉庫的擁有者。
+          # 僅在 source-url 中同時提供了 GPR URL 時才使用。
+          # owner: 'OWNER'  # 可選
+          # 可選的 NuGet.config 位置，如果您的 NuGet.config
+          # 不在儲存庫的根目錄中。
+          # config-file: 'NuGet.config'  # 可選
+          # 可選輸入，用於啟用 NuGet 全域包資料夾的快取
+          # cache: true  # 可選
+          # 用於指定依賴檔案 packages.lock.json 的路徑。
+          # 支援通配符或檔案名稱列表，用於快取多個相依性。
+          # cache-dependency-path: '**/packages.lock.json'  # 可選
+
+      - name: Display .NET info
+        run: dotnet --info
