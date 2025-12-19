@@ -35,15 +35,17 @@ git xet install
 scoop install git-xet
 git xet install
 
-# Or download from GitHub releases
+# Or download and install from GitHub releases
 # Visit: https://github.com/xetdata/xet-tools/releases
+# After installation, run:
+git xet install
 ```
 
 **Linux:**
 ```bash
 # Download and install from GitHub releases
 # Visit: https://github.com/xetdata/xet-tools/releases
-# Then run:
+# Extract the archive and move the binary to your PATH, then run:
 git xet install
 ```
 
